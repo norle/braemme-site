@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Across Denmark, how many kilometres of buffer zone along streams were flagged as cultivated in aerial photos from spring 2025, per municipality." />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect x=%221%22 y=%221%22 width=%2214%22 height=%2214%22 fill=%22%23fbfbf7%22 stroke=%22%231d1d1b%22/%3E%3Crect x=%224%22 y=%224%22 width=%228%22 height=%228%22 fill=%22%23b5179e%22/%3E%3C/svg%3E" />
+    <title>Bræmme · Across Denmark, buffer zone along streams flagged as cultivated in spring 2025</title>
+    <script type="module" crossorigin src="/braemme-site/assets/index-D85oH2LP.js"></script>
+    <link rel="stylesheet" crossorigin href="/braemme-site/assets/index-D2JULy2r.css">
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="hero">
+        <div class="collar collar-head">
+          <p class="edition">Buffer zones along Danish streams, aerial photos from <span data-field="when">spring 2025</span></p>
+          <div class="contact-bar">
+            <a class="profile-link" href="https://www.linkedin.com/in/reinis-mui%C5%BEnieks-3115a6205/" rel="noreferrer">LinkedIn</a>
+            <a class="profile-link" href="https://github.com/norle" rel="noreferrer">GitHub</a>
+            <button type="button" class="contact-button" id="contact-button" aria-expanded="false" aria-controls="contact-pop">Contact</button>
+            <div class="contact-pop" id="contact-pop" role="dialog" aria-label="Contact" hidden>
+              <p class="contact-label">Email</p>
+              <p class="contact-email" data-field="email"></p>
+              <button type="button" class="copy-button" id="copy-email">Copy address</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-body">
+          <h1 class="sheet-title" aria-live="polite"><span data-field="headline-lead">Across Denmark,</span> <span class="title-figure" data-field="headline-figure">—</span> <span data-field="headline-rest">of buffer zone along streams flagged as cultivated in</span> <span data-field="when">spring 2025</span></h1>
+          <p class="hero-explainer">In Denmark, farmers must leave a 2 or 3 metre buffer zone along streams uncultivated.<sup class="ref"><a href="#note-1" id="ref-1" aria-label="Note 1">1</a></sup> These strips were screened across all of Denmark<sup class="ref"><a href="#note-2" id="ref-2" aria-label="Note 2">2</a></sup> in aerial photos from <span data-field="when">spring 2025</span>.<sup class="ref"><a href="#note-3" id="ref-3" aria-label="Note 3">3</a></sup> Every number here was inferred with machine learning, so the numbers are not guaranteed to be accurate.</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="sheet-body" aria-labelledby="map-heading">
+          <h2 id="map-heading" class="visually-hidden">Flagged length by municipality</h2>
+          <div class="units units-map" id="units" role="radiogroup" aria-label="Measure on the map"></div>
+          <figure class="map-face" id="map-face">
+            <div class="map-frame">
+              <div id="map" class="map" role="img" aria-label="Map of Danish municipalities shaded by the chosen measure of flagged buffer zone. The table beside it lists the same numbers."></div>
+              <div class="map-error" id="map-error" hidden><p>The data could not be loaded.</p><p>Reload the page to try again.</p></div>
+            </div>
+            <div class="readout" id="readout" hidden></div>
+            <aside class="detail" id="detail" aria-label="Municipality details" hidden></aside>
+          </figure>
+
+          <aside class="margin" aria-label="Legend and ranked table">
+            <div class="legend" id="legend">
+              <p class="legend-title" id="legend-title">Flagged length along streams (km)</p>
+              <ol class="legend-scale" id="legend-scale"></ol>
+              <ul class="legend-states">
+                <li><span class="swatch swatch-nothing" aria-hidden="true"></span>No buffer zones next to fields</li>
+                <li><span class="swatch swatch-unscreened" aria-hidden="true"></span>Not screened</li>
+              </ul>
+            </div>
+
+            <div class="ranking" id="ranking">
+              <table class="ranked">
+                <caption>Danish municipalities, ranked</caption>
+                <thead>
+                  <tr id="ranked-head">
+                    <th scope="col" aria-sort="none"><button type="button" data-sort="name">Municipality</button></th>
+                  </tr>
+                </thead>
+                <tbody id="ranked-body"></tbody>
+              </table>
+            </div>
+          </aside>
+        </section>
+
+        <section class="gallery" id="gallery" aria-labelledby="gallery-heading" hidden>
+          <div class="section-head">
+            <h2 id="gallery-heading">10 examples</h2>
+            <div class="gallery-key">
+              <label class="key-toggle"><input type="checkbox" id="strip-toggle" checked /> Show the buffer zone</label>
+              <span class="key-strip" aria-hidden="true"></span><span id="gallery-key-strip">Buffer strip</span>
+              <span class="key-bank" aria-hidden="true"></span><span>Top of the bank</span>
+            </div>
+          </div>
+          <ul class="plates" id="plates"></ul>
+        </section>
+
+        <section class="caveat" aria-label="About the flags">
+          <p>A machine learning model was used to generate the flags. Each one is only a possible case, not a confirmed one, and not every flag has been checked by a person.</p>
+          <p class="caveat-check" id="caveat-check" hidden></p>
+        </section>
+      </main>
+
+      <footer class="collar collar-foot">
+        <p class="source-line" data-field="source"></p>
+        <ol class="notes" aria-label="Notes">
+          <li id="note-1">The 2 metre buffer zone is set by the Watercourse Act (<i lang="da">vandløbsloven</i> § 69). GLM 4, a condition for EU farm subsidies, widens it to 3 metres and bans tilling, fertilising, spraying and growing crops in it. Both are measured from the top of the bank. See Landbrugsstyrelsen, <a href="https://lbst.dk/bedrift/konditionalitet-social-konditionalitet-og-krydsoverensstemmelse/konditionalitet/god-landbrugs-og-miljoemaessig-stand-glm/glm-4-3-metersbraemmer-langs-soeer-og-vandloeb" rel="noreferrer" lang="da">GLM 4 – 3-metersbræmmer langs søer og vandløb</a>. <a href="#ref-1" class="note-back" aria-label="Back to the text">↩</a></li>
+          <li id="note-2">The strips screened are the official maps of where the rules apply: Landbrugsstyrelsen's <a href="https://landbrugsgeodata.fvm.dk/" rel="noreferrer" lang="da">2-metersbræmme and 3-metersbræmme 2026</a> datasets. The top of the bank is GeoDanmark's watercourse bank line (<i lang="da">Vandløbskant</i>), from <a href="https://datafordeler.dk/" rel="noreferrer">Datafordeleren</a>. <a href="#ref-2" class="note-back" aria-label="Back to the text">↩</a></li>
+          <li id="note-3">GeoDanmark's spring orthophotos (<i lang="da">Ortofoto forår</i>), from <a href="https://dataforsyningen.dk/" rel="noreferrer">Dataforsyningen</a>. <a href="#ref-3" class="note-back" aria-label="Back to the text">↩</a></li>
+        </ol>
+      </footer>
+    </div>
+  </body>
+</html>
